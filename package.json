@@ -1,4 +1,5 @@
 {
+  "homepage": "https://anthony-d11.github.io/juice-shop/",
   "name": "juice-shop",
   "version": "17.1.1",
   "private": true,
@@ -48,6 +49,8 @@
     "..."
   ],
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build:frontend": "cd frontend && node ./node_modules/@angular/cli/bin/ng build --aot --configuration production --output-hashing=none --vendor-chunk=true --source-map=false",
     "build:server": "tsc",
     "cypress:open": "cypress open",
@@ -245,6 +248,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "frisby": "https://github.com/bkimminich/frisby.git",
+    "gh-pages": "^6.2.0",
     "grunt-cli": "^1.3.2",
     "http-server": "^0.12.3",
     "jasmine": "^3.9.0",
